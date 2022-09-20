@@ -52,7 +52,7 @@ check_missing_values(x_test)
  mapper = lambda x: sum([ord(digit) for digit in x])  x_train[column] = x_train[column].apply(mapper)  x_test[column] = x_test[column].apply(mapper) x_train.head() 
 # Step9: Make sure the data is now changed into numericals print('Feature types:') 
 x_train[cols].dtypes.value_counts() 
-# Step10: Perform dimensionality reduction 
+# Step10: Perform dimensionality reduction  
 n_comp = 12 
 pca = PCA(n_components=n_comp, random_state=420) pca2_results_train = pca.fit_transform(x_train) 
 pca2_results_test = pca.transform(x_test)
